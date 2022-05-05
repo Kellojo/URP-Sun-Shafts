@@ -92,8 +92,19 @@ namespace SunShaft
         {
             CommandBuffer cmd = CommandBufferPool.Get(profilerTag);
             ScriptableRenderer renderer = renderingData.cameraData.renderer;
-            Camera camera = Camera.main;
+            Camera camera = renderingData.cameraData.camera;
+            var cameraData = renderingData.cameraData;
             if (camera == null) { return; }
+
+
+
+#if UNITY_EDITOR  
+            if (cameraData.isSceneViewCamera || cameraData.isPreviewCamera) {
+                return;
+            }
+#endif
+
+
             // start rendering
 
 #if UNITY_EDITOR
