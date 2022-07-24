@@ -1,0 +1,11 @@
+{
+  "name": "com.kellojo.urp-sun-shafts",
+  "version": "1.0.0",
+  "displayName": "Sunshafts for URP",
+  "description": "Small package that adds sun shafts to URP",
+  "author": {
+    "name": "Kellojo",
+    "email": "kellojo1@gmail.com",
+    "url": "https://github.com/Kellojo"
+  }
+}
